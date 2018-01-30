@@ -11,3 +11,6 @@ sudo service nginx restart
 #sudo service gunicorn restart
 #sudo service mysql start
 
+sudo gunicorn -b 0.0.0.0:8080 hello:app&
+cd /home/box/web/ask
+sudo gunicorn -b 0.0.0.0:8000 ask.wsgi:application&
